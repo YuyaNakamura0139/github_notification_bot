@@ -8,6 +8,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      CHANNEL_SECRET: ${{ secrets.CHANNEL_SECRET }}
+      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      USER_ID: ${{ secrets.USER_ID }}
     steps:
       - uses: actions/checkout@v2
 
